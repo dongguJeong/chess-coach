@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Environment variables (민감 정보 — 토큰, DB 비밀번호)
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Alembic (버전 파일은 커밋하지만, 캐시는 제외)
+# alembic/versions/ 는 커밋 대상이므로 여기 넣지 않음
+
+# Logs
+*.log
+
+# Node (frontend용 — 나중에 프론트 시작하면 필요)
+node_modules/
+frontend/build/
+frontend/dist/
+
+# OS
+Thumbs.db
+
+.DS_Store
+.env
+/node_modules/
+
+# React Router
+/.react-router/
+/build/
