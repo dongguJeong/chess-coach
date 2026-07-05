@@ -23,7 +23,7 @@ class Game(Base) :
     black_player = Column(String(50))
     result = Column(String(10))
     eco = Column(String(5), nullable=True)
-    opening_name=Column(String(50))
+    opening_name=Column(String(200), nullable=True)
     time_control = Column(String(20), nullable=True)
     played_at = Column(DateTime, nullable=True)
     collected_at = Column(DateTime, server_default=func.now())

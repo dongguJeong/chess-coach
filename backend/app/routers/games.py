@@ -24,7 +24,7 @@ async def collect_games(
     skipped_count = 0
 
     for g in games :
-        existing = db.query(Game).filter(Game.lichess_game_id == g['id']).first
+        existing = db.query(Game).filter(Game.lichess_game_id == g['id']).first()
         if existing :
             skipped_count += 1
             continue
@@ -37,7 +37,7 @@ async def collect_games(
             result=g.get("winner", "draw"),
             eco=g.get("opening", {}).get("eco"),
             time_control=g.get("speed"),
-            opening_name = g.get('name',''),
+            opening_name=g.get("opening", {}).get("name"),
             played_at=datetime.fromtimestamp(g.get("createdAt", 0) / 1000) if g.get("createdAt") else None,
         )
 
